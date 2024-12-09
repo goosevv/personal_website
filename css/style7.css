@@ -1,0 +1,103 @@
+ body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+  /* Блок header */
+  .header {
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+    .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+  
+  .header__logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  .header__logo span {
+    color: orangered;
+  }
+  .header__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header__nav-item {
+    display: inline;
+}
+.header__nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.header__nav-link:hover {
+    color: orangered;
+}
+
+  
+  /* Блок intro */
+  .intro {
+    background-image: url('/images/beautiful-young-woman-looking-away.jpg'); /* Заміна зображення */
+    background-size: cover;
+    background-position: absolute;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .intro__content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+}   
+    .intro__title {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+    .intro__subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+  
+  /* Кнопка */
+  .button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .button--cta {
+    background-color: orangered;
+  }
+  
+  .button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
