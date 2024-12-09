@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №3</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Загальні стилі для кнопки */
+        .custom-button {
+            display: inline-block;
+            padding: 20px 24px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            background-color: #007bff;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Ефекти при наведенні */
+        .custom-button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ефекти при натисканні */
+        .custom-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Додатковий градієнт */
+        .custom-button.gradient {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Практична робота №1: Розклад занять на місяць</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../about.html">Про мене</a></li>
+                <li><a href="../praktichni.html">Практичні роботи</a></li>
+                <li><a href="../laboratorni.html">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="text-align: center; margin-top: 50px;">
+        <!-- Кнопка з тегом <button> -->
+        <button class="custom-button">Натисни мене</button>
+    </div>
+    <footer>
+        <p>Контактна інформація: danilogusev.gus@gmail.com | 2024</p>
+        <p><a href="https://github.com/goosevv">GitHub</a></p>
+    </footer>
+</body>
+</html>
