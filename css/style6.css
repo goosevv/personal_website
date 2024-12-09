@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #87ceeb, #ffffff);
+  }
+  
+  .animation-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .cloud {
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 60px 20px 0px #fff, 120px 40px 0px #fff;
+    animation: moveCloud 20s linear infinite;
+  }
+  
+  /* Для декількох хмар */
+  .cloud:nth-child(1) {
+    top: 20%;
+    left: -200px;
+    animation-delay: 0s;
+  }
+  
+  .cloud:nth-child(2) {
+    top: 50%;
+    left: -300px;
+    width: 200px;
+    height: 100px;
+    animation-delay: 5s;
+  }
+  
+  .cloud:nth-child(3) {
+    top: 70%;
+    left: -250px;
+    width: 180px;
+    height: 90px;
+    animation-delay: 10s;
+  }
+  
+  /* Анімація руху хмар */
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+  
+  .pokemon {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 50%;
+    left: 0;
+    animation: flyPokemon 4s ease-in-out infinite alternate, jumpPokemon 1s ease-in-out infinite, spinPokemon 3s linear infinite;
+  }
+  .charizard {
+    animation: flyPokemon 6s linear infinite alternate, jumpPokemon 2s ease-in-out infinite;
+  }
+  
+  .bulbasaur {
+    animation: flyPokemon 8s linear infinite reverse, spinPokemon 4s linear infinite;
+  }
+  
+  
+  @keyframes moveClouds {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1000px 0;
+    }
+  }
+  
+  @keyframes flyPokemon {
+    0% {
+      transform: translate(0, -50%) scale(1);
+      left: 0;
+    }
+    50% {
+      transform: translate(50vw, -80%) scale(1.2);
+    }
+    100% {
+      transform: translate(100vw, -50%) scale(1);
+      left: 100%;
+    }
+  }
+  
+  @keyframes jumpPokemon {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes spinPokemon {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .pokeball {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #fff 45%, #ff0000 45%);
+    border: 4px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spinPokeball 3s linear infinite;
+  }
+  
+  .pokeball::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ff0000;
+    border-bottom: 4px solid black;
+  }
+  
+  .pokeball::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 4px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  /* Анімація обертання покебола */
+  @keyframes spinPokeball {
+    0% {
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, 0) rotate(360deg);
+    }
+  }
+  
+  /* Покебол стрибає */
+  @keyframes bouncePokeball {
+    0%, 100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -20px) scale(1.1);
+    }
+  }
+
+  @keyframes throwPokeball {
+    0% {
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      transform: translate(0, -50vh) scale(0.5);
+    }
+    100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+  }
+
+  @keyframes returnPokeball {
+    0% {
+      transform: translate(-50%, -50vh) scale(0.5);
+    }
+    100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+  }
+  
+  
+  .pokeball {
+    animation: spinPokeball 3s linear infinite, bouncePokeball 1s ease-in-out infinite;
+  }
