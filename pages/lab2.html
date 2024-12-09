@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Лабораторна робота №2: Основи HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Головна</a></li>
+                <li><a href="pages/about.html">Про мене</a></li>
+                <li><a href="pages/practical.html">Практичні роботи</a></li>
+                <li><a href="/pages/labs.html">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Форма реєстрації</h2>
+            <form action="https://webhook.site/YOUR_UNIQUE_ID" method="POST">
+                <label for="first-name">Ім'я:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <br>
+                <label for="last-name">Прізвище:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <br>
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <label for="confirm-password">Підтвердьте пароль:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <br>
+                <label for="birthdate">Дата народження:</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <br>
+                <label for="gender">Стать:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                    <option value="other">Інше</option>
+                </select>
+                <br>
+                <input type="submit" value="Зареєструватися">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Контактна інформація: danilogusev.gus@gmail.com | 2024</p>
+        <p><a href="https://github.com/goosevv">GitHub</a></p>
+    </footer>
+</body>
+</html>
