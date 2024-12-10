@@ -53,7 +53,7 @@
   
   /* Блок intro */
   .intro {
-    background-image: url('/images/beautiful-young-woman-looking-away.jpg'); /* Заміна зображення */
+    background-image: url('../images/beautiful-young-woman-looking-away.jpg'); /* Заміна зображення */
     background-size: cover;
     background-position: absolute;
     height: calc(100vh - 70px);
